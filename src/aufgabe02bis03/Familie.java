@@ -26,11 +26,11 @@ public class Familie implements Iterable<String>
         mitglieder.add(vater);
       }
       else {
-        throw new IllegalArgumentException("Don't use an empty value for parents!");
+        throw new IllegalArgumentException("Die Eltern dürfen nicht leer sein!");
       }
     }
     catch (NullPointerException e) {
-      System.err.println("Empty value for parents!");
+      System.err.println("Leere Eingabe für Eltern!");
     }
   }
 
@@ -44,11 +44,11 @@ public class Familie implements Iterable<String>
         mitglieder.add(kind);
       }
       else {
-        throw new IllegalArgumentException("Don't use an empty value for kind");
+        throw new IllegalArgumentException("Die Eingabe darf nicht leer sein");
       }
     }
     catch (NullPointerException e) {
-      System.err.println("Empty value for kind!");
+      System.err.println("Leere Eingabe für Kind!");
     }
   }
 
