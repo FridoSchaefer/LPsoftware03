@@ -1,5 +1,11 @@
 package aufgabe01;
 
+/**
+ * @author Frido Schäfer
+ * MatrikelNR: 19449
+ * System: Windows 10 JDK17
+ */
+
 import java.io.*;
 import java.util.ArrayList;
 

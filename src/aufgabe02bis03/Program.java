@@ -1,5 +1,11 @@
 package aufgabe02bis03;
 
+/**
+ * @author Frido Schäfer
+ * MatrikelNR: 19449
+ * System: Windows 10 JDK17
+ */
+
 public class Program
 {
   /**
