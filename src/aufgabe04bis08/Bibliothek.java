@@ -27,7 +27,15 @@ public class Bibliothek {
                                         "Bibliographisches Institut, Mannheim",
                                         "3-411-04013-0",
                                         "-"));
-        zettelkasten.findMedium("Duden 01. Die deutsche Rechtschreibung");
+        zettelkasten.addMedium(new CD("Live At Wembley","Queen","Parlophone (EMI)"));
+
+        zettelkasten.sort("A");
+
+        for (Medium medium : zettelkasten) {
+            System.out.println(medium.calculateRepresentation());
+        }
+
+        //zettelkasten.findMedium("Duden 01. Die deutsche Rechtschreibung");
 
         //zettelkasten.dropMedium("Duden 01. Die deutsche Rechtschreibung");
 

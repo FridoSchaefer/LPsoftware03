@@ -19,7 +19,7 @@ public class Zettelkasten implements Iterable<Medium>, Serializable
     ZEITSCHRIFT
   }
 
-  private static ArrayList<Medium> myZettelkasten = new ArrayList<>();
+  public static ArrayList<Medium> myZettelkasten = new ArrayList<>();
 
   //Vergleich auf Basis des Typs
   private static final Comparator<Medium> compareByClassName = Comparator.comparing((Medium type) -> type.getClass().getName());
