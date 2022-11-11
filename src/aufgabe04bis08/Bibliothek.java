@@ -19,17 +19,33 @@ public class Bibliothek {
      * @param args
      */
     public static void main(String[] args){
-        Medium mediumArray[] = new Medium[4];
+
+        Zettelkasten zettelkasten = new Zettelkasten();
+
+        zettelkasten.addMedium(new Buch("Duden 01. Die deutsche Rechtschreibung",
+                                        2004,
+                                        "Bibliographisches Institut, Mannheim",
+                                        "3-411-04013-0",
+                                        "-"));
+        zettelkasten.findMedium("Duden 01. Die deutsche Rechtschreibung");
+
+        //zettelkasten.dropMedium("Duden 01. Die deutsche Rechtschreibung");
+
+
+
+
+        /*Medium mediumArray[] = new Medium[4];
         mediumArray[0] = new Buch("Duden 01. Die deutsche Rechtschreibung",2004, "Bibliographisches Institut, Mannheim", "3-411-04013-0", "-");
         mediumArray[1] = new CD("1", "Apple (Bea (EMI))", "The Beatles");
         mediumArray[2] = new Zeitschrift("Der Spiegel", "0038-7452", 54, 6);
-        mediumArray[3] = new ElektronischesMedium("Hochschule Stralsund", " http://www.hochschule-stralsund.de");
+        mediumArray[3] = new ElektronischesMedium("Hochschule Stralsund", " http://www.hochschule-stralsund.de");*/
 
-        parseBibTex(mediumArray);
 
-        for(int i = 0; i < mediumArray.length; i++){
+        //parseBibTex(mediumArray);
+
+        /*for(int i = 0; i < mediumArray.length; i++){
             System.out.println(mediumArray[i].calculateRepresentation());
-        }
+        }*/
     }
 
     /**
