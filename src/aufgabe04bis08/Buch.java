@@ -8,10 +8,10 @@ package aufgabe04bis08;
 
 public class Buch extends Medium{
 
-    private int Erscheinungsjahr;
-    private String Verlag;
+    private int erscheinungsjahr;
+    private String verlag;
     private String ISBN;
-    private String Verfasser;
+    private String Author;
 
     /**
      * Konstruktor
@@ -19,30 +19,35 @@ public class Buch extends Medium{
      * @param _erscheinungsjahr
      * @param _verlag
      * @param _isbn
-     * @param _verfasser
+     * @param _author
      */
-    public Buch(String _titel, int _erscheinungsjahr, String _verlag, String _isbn, String _verfasser){
+    public Buch(String _titel, int _erscheinungsjahr, String _verlag, String _isbn, String _author){
         super(_titel);
         setErscheinungsjahr(_erscheinungsjahr);
         setVerlag(_verlag);
         setISBN(_isbn);
-        setVerfasser(_verfasser);
+        setAuthor(_author);
     }
 
     public int getErscheinungsjahr() {
-        return Erscheinungsjahr;
+        return erscheinungsjahr;
     }
 
     public void setErscheinungsjahr(int _erscheinungsjahr) {
-        Erscheinungsjahr = _erscheinungsjahr;
+        this.erscheinungsjahr = _erscheinungsjahr;
     }
 
     public String getVerlag() {
-        return Verlag;
+        return verlag;
     }
 
     public void setVerlag(String _verlag) {
-        Verlag = _verlag;
+        if(_verlag.isBlank()){
+            throw new IllegalArgumentException("Eingegebener Verlag ist ungültig!");
+        }else
+        {
+            this.verlag = _verlag;
+        }
     }
 
     public String getISBN() {
@@ -54,7 +59,7 @@ public class Buch extends Medium{
         /**
          * Konvertierung des übergebenen Strings in einen Integer Array
          */
-        String numberIsbnStr = _ISBN.replace("-","");
+        String numberIsbnStr = _ISBN.replaceAll("-","");
         int[] isbnArr = new int[numberIsbnStr.length()];
         char[] numberStrArray = numberIsbnStr.toCharArray();
         for(int i = 0; i < numberStrArray.length; i++){
@@ -82,12 +87,17 @@ public class Buch extends Medium{
         }
     }
 
-    public String getVerfasser() {
-        return Verfasser;
+    public String getAuthor() {
+        return Author;
     }
 
-    public void setVerfasser(String _verfasser) {
-        Verfasser = _verfasser;
+    public void setAuthor(String _author) {
+        if(_author.isBlank()){
+            throw new IllegalArgumentException("Eingegebene Author ist ungültig!");
+        }else
+        {
+            Author = _author;
+        }
     }
 
     @Override
@@ -146,7 +156,7 @@ public class Buch extends Medium{
         objString.append("Erscheinungsjahr: " + getErscheinungsjahr() + "\n");
         objString.append("Verlag: " + getVerlag() + "\n");
         objString.append("ISBN: " + getISBN() + "\n");
-        objString.append("Verfasser: " +getVerfasser() + "\n");
+        objString.append("Verfasser: " + getAuthor() + "\n");
         return objString;
     }
 }

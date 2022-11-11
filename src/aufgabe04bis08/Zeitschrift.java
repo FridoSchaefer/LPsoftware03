@@ -44,7 +44,12 @@ public class Zeitschrift extends Medium{
     }
 
     public void setISSN(String _ISSN) {
-        this.ISSN = _ISSN;
+        if(_ISSN.isBlank()){
+            throw new IllegalArgumentException("Eingegebene ISSN ist ungültig!");
+        }else
+        {
+            this.ISSN = _ISSN;
+        }
     }
 
     public void setVolume(int _volume) {

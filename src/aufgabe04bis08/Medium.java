@@ -7,7 +7,7 @@ package aufgabe04bis08;
  */
 
 public abstract class Medium implements Comparable<Medium>{
-    private String Titel;
+    private String titel;
 
     /**
      * Konstruktor
@@ -18,15 +18,20 @@ public abstract class Medium implements Comparable<Medium>{
     }
 
     public String getTitel() {
-        return Titel;
+        return titel;
     }
 
     public void setTitel(String _titel) {
-        Titel = _titel;
+        if(_titel.isBlank()){
+            throw new IllegalArgumentException("Eingegebener Titel ist ungültig!");
+        }else
+        {
+            titel = _titel;
+        }
     }
 
     public int compareTo(Medium medium) {
-        return this.Titel.compareToIgnoreCase(medium.Titel);
+        return this.titel.compareToIgnoreCase(medium.titel);
     }
 
     public StringBuilder calculateRepresentation(){

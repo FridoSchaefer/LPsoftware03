@@ -25,7 +25,7 @@ public class Zettelkasten implements Iterable<Medium>, Serializable
   private static final Comparator<Medium> compareByClassName = Comparator.comparing((Medium type) -> type.getClass().getName());
 
   // Vergleich auf Basis des Titels und des Typs
-  private static final Comparator<Medium> compareByTitleAndClassName = Comparator.comparing((Medium title) -> title.getTitel()).thenComparing((Medium type) -> type.getClass().getName());
+  private static final Comparator<Medium> compareByTitleAndClassName = Comparator.comparing((Medium titel) -> titel.getTitel()).thenComparing((Medium type) -> type.getClass().getName());
 
 
 

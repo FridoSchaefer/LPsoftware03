@@ -37,11 +37,21 @@ public class CD extends Medium{
     }
 
     public void setLabel(String _label) {
-        Label = _label;
+        if(_label.isBlank()){
+            throw new IllegalArgumentException("Eingegebenes Lable ist ungültig!");
+        }else
+        {
+            this.Label = _label;
+        }
     }
 
     public void setKuenstler(String _kuenstler) {
-        Kuenstler = _kuenstler;
+        if(_kuenstler.isBlank()){
+            throw new IllegalArgumentException("Eingegebener Künstler ist ungültig!");
+        }else
+        {
+            this.Kuenstler = _kuenstler;
+        }
     }
 
     @Override
