@@ -1,5 +1,11 @@
 package aufgabe04bis08;
 
+/**
+ * @author Frido Schäfer
+ * MatrikelNR: 19449
+ * System: Windows 10 JDK17
+ */
+
 import java.io.Serializable;
 import java.util.*;
 import java.util.function.Predicate;
