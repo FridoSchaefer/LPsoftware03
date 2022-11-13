@@ -11,8 +11,8 @@ import java.util.regex.Pattern;
 
 public class Bibliothek {
 
-    private static final String TYPEOFMEDIUM = "@(.[A-Z]*)\\{";
-    private static final String VALUEOFMEDIUM = "([A-Z]*) = (\\{(.+?)}|[0-9]+)";
+    /*private static final String TYPEOFMEDIUM = "@(.[A-Z]*)\\{";
+    private static final String VALUEOFMEDIUM = "([A-Z]*) = (\\{(.+?)}|[0-9]+)";*/
 
     /**
      * Main Klasse zur Überprüfung der Methoden
@@ -30,6 +30,10 @@ public class Bibliothek {
         zettelkasten.addMedium(new CD("Live At Wembley","Queen","Parlophone (EMI)"));
 
         zettelkasten.sort("A");
+
+        HumanReadablePersistency humanReadablePersistency = new HumanReadablePersistency();
+        humanReadablePersistency.save(zettelkasten,"testing");
+        //humanReadablePersistency.load("testing");
 
         for (Medium medium : zettelkasten) {
             System.out.println(medium.calculateRepresentation());
@@ -61,7 +65,7 @@ public class Bibliothek {
      * @param userInput
      * @return bool
      */
-    public static boolean isInputAnInt(String userInput) {
+   /* public static boolean isInputAnInt(String userInput) {
         try {
             Integer.parseInt(userInput);
             return true;
@@ -132,11 +136,11 @@ public class Bibliothek {
         }
     }
 
-    /**
+    *//**
      * Methode zur Generierung eines Medium Arrays mithilfe von Regex Gruppen
      * @param userInput
      * @return medium Array
-     */
+     *//*
     public static String[] generateBibTex(String userInput) {
         String[] inputPosition = new String[6];
         Pattern pTypeOfMedium = Pattern.compile("@(.[A-Z]*)\\{", 2);
@@ -259,5 +263,5 @@ public class Bibliothek {
                 return inputPosition;
             }
         }
-    }
+    }*/
 }

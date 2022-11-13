@@ -63,7 +63,7 @@ public class CD extends Medium{
     public StringBuilder calculateRepresentation() {
         StringBuilder objString = super.calculateRepresentation();
         objString.append("Label: " + getLabel() + "\n");
-        objString.append("Kuenstler: " + getKuenstler() + "\n");
+        objString.append("Künstler: " + getKuenstler() + "\n");
         return objString;
     }
 }
