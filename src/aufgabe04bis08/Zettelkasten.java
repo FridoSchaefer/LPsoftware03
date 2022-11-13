@@ -75,33 +75,33 @@ public class Zettelkasten implements Iterable<Medium>, Serializable
     List<Medium> foundMedia = findMedium(title);
     if (foundMedia.size() >= 1 && !title.isBlank()) {
       if (typesOfMedia == TypesOfMedia.ALL) {
-        for (Medium media : foundMedia) {
-          myZettelkasten.remove(media);
-          System.out.println("Folgende Medien wurden erfolgreich gelöscht: " + media.getClass().getSimpleName() + " - " + media.getTitel() + System.lineSeparator());
+        for (Medium hit : foundMedia) {
+          myZettelkasten.remove(hit);
+          System.out.println("Folgende Medien wurden erfolgreich gelöscht: " + hit.getClass().getSimpleName() + " - " + hit.getTitel() + System.lineSeparator());
         }
       }
       if (typesOfMedia == TypesOfMedia.BUCH) {
-        for (Medium media : foundMedia) {
-          myZettelkasten.remove(media);
-          System.out.println("Folgende Medien wurden erfolgreich gelöscht: " + media.getClass().getSimpleName() + " - " + media.getTitel() + System.lineSeparator());
+        for (Medium hit : foundMedia) {
+          myZettelkasten.remove(hit);
+          System.out.println("Folgende Medien wurden erfolgreich gelöscht: " + hit.getClass().getSimpleName() + " - " + hit.getTitel() + System.lineSeparator());
         }
       }
       if (typesOfMedia == TypesOfMedia.CD) {
-        for (Medium media : foundMedia) {
-          myZettelkasten.remove(media);
-          System.out.println("Folgende Medien wurden erfolgreich gelöscht: " + media.getClass().getSimpleName() + " - " + media.getTitel() + System.lineSeparator());
+        for (Medium hit : foundMedia) {
+          myZettelkasten.remove(hit);
+          System.out.println("Folgende Medien wurden erfolgreich gelöscht: " + hit.getClass().getSimpleName() + " - " + hit.getTitel() + System.lineSeparator());
         }
       }
       if (typesOfMedia == TypesOfMedia.ELEKTRONISCHES_MEDIUM) {
-        for (Medium media : foundMedia) {
-          myZettelkasten.remove(media);
-          System.out.println("Folgende Medien wurden erfolgreich gelöscht: " + media.getClass().getSimpleName() + " - " + media.getTitel() + System.lineSeparator());
+        for (Medium hit : foundMedia) {
+          myZettelkasten.remove(hit);
+          System.out.println("Folgende Medien wurden erfolgreich gelöscht: " + hit.getClass().getSimpleName() + " - " + hit.getTitel() + System.lineSeparator());
         }
       }
       if (typesOfMedia == TypesOfMedia.ZEITSCHRIFT) {
-        for (Medium media : foundMedia) {
-          myZettelkasten.remove(media);
-          System.out.println("Folgende Medien wurden erfolgreich gelöscht: " + media.getClass().getSimpleName() + " - " + media.getTitel() + System.lineSeparator());
+        for (Medium hit : foundMedia) {
+          myZettelkasten.remove(hit);
+          System.out.println("Folgende Medien wurden erfolgreich gelöscht: " + hit.getClass().getSimpleName() + " - " + hit.getTitel() + System.lineSeparator());
         }
       }
     } else if (title.isBlank()) {

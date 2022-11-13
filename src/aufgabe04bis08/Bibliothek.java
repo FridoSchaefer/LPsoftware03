@@ -32,7 +32,14 @@ public class Bibliothek {
         try {zettelkasten.addMedium(new Zeitschrift("drop", "-", 0, 0));} catch (Exception e) {e.printStackTrace();}
         try {zettelkasten.addMedium(new Zeitschrift("drop", "-", 0, 0));} catch (Exception e) {e.printStackTrace();}
 
-        //try {zettelkasten.findMedium("drop");} catch (Exception e) {e.printStackTrace();}
+        try {zettelkasten.findMedium("drop");} catch (Exception e) {e.printStackTrace();}
+        //zettelkasten.dropMedium("drop");
+        zettelkasten.dropMediumOnDuplicate("drop", Zettelkasten.TypesOfMedia.CD);
+
+        /*for (Medium medium : zettelkasten) {
+            System.out.println(medium.calculateRepresentation());
+        }*/
+
         /*try {zettelkasten.dropMedium("");} catch (Exception e) {e.printStackTrace();}
         try {zettelkasten.dropMedium("drop");} catch (Exception e) {e.printStackTrace();}
         try {zettelkasten.dropMediumOnDuplicate("", Zettelkasten.TypesOfMedia.ALL);} catch (Exception e) {e.printStackTrace();}
@@ -55,23 +62,21 @@ public class Bibliothek {
 
         /*HumanReadablePersistency humanReadablePersistency = new HumanReadablePersistency();
         humanReadablePersistency.save(zettelkasten,"testing");
-        //humanReadablePersistency.load("testing.txt");
+        //humanReadablePersistency.load("testing");
 
         for(Medium medium : zettelkasten){
             System.out.println(medium.calculateRepresentation());
         }*/
 
-        BibTexPersistency btp = new BibTexPersistency();
+       /* BibTexPersistency btp = new BibTexPersistency();
 
-        btp.save(zettelkasten, "bibTex");
+        btp.save(zettelkasten, "bibTex");*/
         //btp.load("bibTex");
 
 
         //zettelkasten.findMedium("Duden 01. Die deutsche Rechtschreibung");
 
         //zettelkasten.dropMedium("Duden 01. Die deutsche Rechtschreibung");
-
-
 
 
         /*Medium mediumArray[] = new Medium[4];
