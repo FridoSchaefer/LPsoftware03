@@ -38,7 +38,7 @@ public class BibTexPersistency implements Persistency
                   buch.getErscheinungsjahr() +
                   ", isbn = {" +
                   buch.getISBN() +
-                  "}}"
+                  "}}" + System.lineSeparator()
           );
         } else if (medium.getClass().getSimpleName().equals("CD"))
         {
@@ -50,7 +50,7 @@ public class BibTexPersistency implements Persistency
                   cd.getKuenstler() +
                   "}, label = { " +
                   cd.getLabel() +
-                  "}}"
+                  "}}" + System.lineSeparator()
           );
         } else if (medium.getClass().getSimpleName().equals("ElektronischesMedium"))
         {
@@ -60,7 +60,7 @@ public class BibTexPersistency implements Persistency
                   elMed.getTitel() +
                   "}, URL = {" +
                   elMed.getURL() +
-                  "}}"
+                  "}}" + System.lineSeparator()
           );
         } else if (medium.getClass().getSimpleName().equals("Zeitschrift"))
         {
@@ -74,7 +74,7 @@ public class BibTexPersistency implements Persistency
                   zeitschrift.getVolume() +
                   ", number = " +
                   zeitschrift.getNummer() +
-                  "}"
+                  "}" + System.lineSeparator()
           );
         }
       }
@@ -95,7 +95,7 @@ public class BibTexPersistency implements Persistency
   {
     ArrayList<String> rawInput = new ArrayList<>();
     StringBuilder readValue = new StringBuilder();
-    try (BufferedReader br = new BufferedReader(new FileReader(fileName)))
+    try (BufferedReader br = new BufferedReader(new FileReader(fileName + "txt")))
     {
       while (br.ready())
       {
