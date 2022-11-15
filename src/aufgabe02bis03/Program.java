@@ -39,4 +39,4 @@ public class Program
     }
   }
 }
-//Es ist nicht möglich, dass fremder Code diesen Überschreibt, da man nur Lese Berechtigung hat.
+//Die Datenkapselung wird sehr stark verletzt
